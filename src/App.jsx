@@ -35,32 +35,32 @@ const PROJECTS = [
   {
     id: 1, name: 'LUXORA',
     category: 'E-commerce de Lujo',  tech: 'React + Next.js',
-    color: '#C4A97D', image: '/images/proj-luxora.png',     TechIcon: SiReact,
+    color: '#C4A97D', image: '/images/proj-luxora.webp',     TechIcon: SiReact,
   },
   {
     id: 2, name: 'GrowSales',
     category: 'CRM de Ventas',       tech: 'Vue.js + Laravel',
-    color: '#1BBCD8', image: '/images/proj-growsales.png',  TechIcon: SiVuedotjs,
+    color: '#1BBCD8', image: '/images/proj-growsales.webp',  TechIcon: SiVuedotjs,
   },
   {
     id: 3, name: 'Casa Alta',
     category: 'Portal Inmobiliario', tech: 'React + Node.js',
-    color: '#D4A76A', image: '/images/proj-casaalta.png',   TechIcon: SiReact,
+    color: '#D4A76A', image: '/images/proj-casaalta.webp',   TechIcon: SiReact,
   },
   {
     id: 4, name: 'Talento 360',
     category: 'Plataforma RRHH',     tech: 'React + Firebase',
-    color: '#34D399', image: '/images/proj-talento360.png', TechIcon: SiFirebase,
+    color: '#34D399', image: '/images/proj-talento360.webp', TechIcon: SiFirebase,
   },
   {
     id: 5, name: 'Nexora',
     category: 'Software Empresarial',tech: 'Next.js + AWS',
-    color: '#818CF8', image: '/images/proj-nexora.png',     TechIcon: SiNextdotjs,
+    color: '#818CF8', image: '/images/proj-nexora.webp',     TechIcon: SiNextdotjs,
   },
   {
     id: 6, name: 'Mar de Luz',
     category: 'Resort & Wellness',   tech: 'WordPress Premium',
-    color: '#FDBA74', image: '/images/proj-mardeluz.png',   TechIcon: SiWordpress,
+    color: '#FDBA74', image: '/images/proj-mardeluz.webp',   TechIcon: SiWordpress,
   },
 ]
 
@@ -71,7 +71,7 @@ const SERVICES = [
     tagline: 'Presencia digital profesional para tu negocio',
     detail: 'Diseñamos y desarrollamos sitios web modernos, rápidos y optimizados para SEO que convierten visitantes en clientes reales.',
     bullets: ['Diseño responsivo', 'Optimización SEO', 'Rendimiento máximo', 'Panel de gestión'],
-    image: '/images/svc-web.png',
+    image: '/images/svc-web.webp',
   },
   {
     id: 2, num: '02', emoji: '📱', Icon: FaMobile,
@@ -79,7 +79,7 @@ const SERVICES = [
     tagline: 'Android e iOS con Flutter y React Native',
     detail: 'Desarrollamos apps móviles intuitivas y de alto rendimiento para Android e iOS con una sola base de código.',
     bullets: ['Android e iOS', 'UI/UX nativo', 'Notificaciones push', 'Integración de APIs'],
-    image: '/images/svc-apps.png',
+    image: '/images/svc-apps.webp',
   },
   {
     id: 3, num: '03', emoji: '⚙️', Icon: FaCogs,
@@ -87,7 +87,7 @@ const SERVICES = [
     tagline: 'Software que se adapta exactamente a tus procesos',
     detail: 'Creamos sistemas empresariales personalizados que automatizan procesos y aumentan la productividad de tu empresa.',
     bullets: ['Automatización', 'Dashboards', 'Reportes avanzados', 'Integraciones ERP'],
-    image: '/images/svc-sistemas.png',
+    image: '/images/svc-sistemas.webp',
   },
   {
     id: 4, num: '04', emoji: '🤝', Icon: FaUsers,
@@ -95,7 +95,7 @@ const SERVICES = [
     tagline: 'Tu equipo de tecnología externo de confianza',
     detail: 'Proveemos talento tecnológico especializado para complementar tu equipo y acelerar el desarrollo de tus proyectos.',
     bullets: ['Desarrolladores senior', 'Gestión ágil', 'Code review', 'Soporte continuo'],
-    image: '/images/svc-outsourcing.png',
+    image: '/images/svc-outsourcing.webp',
   },
 ]
 
@@ -377,7 +377,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2.5 select-none">
-            <img src="/images/wavdev.png" alt="WavDevelop" className="w-9 h-9 object-contain" />
+            <img src="/images/wavdev.webp" alt="WavDevelop" className="w-9 h-9 object-contain" />
             <span className="font-display font-bold text-lg text-white tracking-tight">WavDevelop</span>
           </div>
 
@@ -484,7 +484,7 @@ function HeroChapter({ onEnter }) {
     <section
       ref={ref}
       id="inicio"
-      className="relative h-screen flex flex-col overflow-hidden"
+      className="relative h-screen-real flex flex-col overflow-clip-ios"
       style={{ background: '#040C10' }}
     >
       {/* ── Aurora blobs ── */}
@@ -710,9 +710,9 @@ function ManifestoChapter({ onEnter }) {
 
   return (
     <div ref={sectionRef} id="historia">
-      <div ref={containerRef} style={{ height: '300vh' }}>
+      <div ref={containerRef} style={{ height: 'calc(var(--vh, 1vh) * 300)' }}>
         <div
-          className="sticky top-0 h-screen overflow-hidden transition-colors duration-700"
+          className="sticky top-0 h-screen-real overflow-clip-ios transition-colors duration-700"
           style={{ background: `linear-gradient(145deg, #040C10 0%, #061A25 100%)` }}
         >
           {/* Aurora ambiental que cambia con el beat */}
@@ -944,7 +944,7 @@ function ServicesIntro() {
   return (
     <div
       ref={containerRef}
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen-real flex items-center justify-center overflow-clip-ios"
       style={{ background: '#040C10' }}
     >
       {/* Glow ambiental */}
@@ -1088,9 +1088,9 @@ function ServicesChapter({ onEnter }) {
 
   return (
     <div ref={sectionRef} id="servicios">
-      <div ref={containerRef} style={{ height: '400vh' }}>
+      <div ref={containerRef} style={{ height: 'calc(var(--vh, 1vh) * 400)' }}>
         <div
-          className="sticky top-0 h-screen overflow-hidden transition-colors duration-700"
+          className="sticky top-0 h-screen-real overflow-clip-ios transition-colors duration-700"
           style={{ background: `linear-gradient(145deg,${theme.bg} 0%,${theme.bgAlt} 100%)` }}
         >
           {/* Número decorativo de fondo */}
@@ -1159,6 +1159,8 @@ function ServicesChapter({ onEnter }) {
                   <img
                     src={svc.image}
                     alt={svc.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full"
                     style={{ display: 'block', objectFit: 'contain', maxHeight: '170px' }}
                   />
@@ -1282,6 +1284,8 @@ function ServicesChapter({ onEnter }) {
                         <img
                           src={svc.image}
                           alt={svc.title}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover object-top"
                           style={{ display: 'block' }}
                         />
@@ -1370,7 +1374,7 @@ function BridgeChapter() {
   return (
     <div
       ref={containerRef}
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen-real flex items-center justify-center overflow-clip-ios"
       style={{ background: '#040C10' }}
     >
       {/* Glow ambiental */}
@@ -1543,10 +1547,10 @@ function PortfolioChapter({ onEnter }) {
 
   return (
     <div ref={sectionRef} id="portafolio">
-      <div ref={containerRef} style={{ height: `${PROJECTS.length * 100}vh` }}>
+      <div ref={containerRef} style={{ height: `calc(var(--vh, 1vh) * ${PROJECTS.length * 100})` }}>
 
         <div
-          className="sticky top-0 h-screen overflow-hidden"
+          className="sticky top-0 h-screen-real overflow-clip-ios"
           style={{ background: '#05050a' }}
         >
           {/* ── Fondo atmosférico principal ── */}
@@ -1678,6 +1682,8 @@ function PortfolioChapter({ onEnter }) {
                   <img
                     src={p.image}
                     alt={p.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full object-cover object-top"
                     style={{ height: 'calc(100% - 32px)', display: 'block' }}
                   />
@@ -1833,6 +1839,8 @@ function PortfolioChapter({ onEnter }) {
                         <img
                           src={p.image}
                           alt={p.name}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover object-top"
                           style={{ display: 'block' }}
                         />
@@ -2196,78 +2204,265 @@ function ContactChapter({ onEnter }) {
 }
 
 // ═══════════════════════════════════════════════════════════════
+//  MODAL LEGAL
+// ═══════════════════════════════════════════════════════════════
+const LEGAL_CONTENT = {
+  'Términos de Servicio': {
+    titulo: 'Términos de Servicio',
+    secciones: [
+      {
+        heading: '1. Aceptación de los términos',
+        body: 'Al contratar los servicios de WavDevelop, el cliente acepta los presentes términos y condiciones en su totalidad. WavDevelop se reserva el derecho de modificar estos términos en cualquier momento con previo aviso.',
+      },
+      {
+        heading: '2. Servicios ofrecidos',
+        body: 'WavDevelop ofrece servicios de desarrollo web, aplicaciones móviles, sistemas a la medida y outsourcing de TI. Cada proyecto se rige por un contrato específico que detalla alcance, plazos y costos acordados.',
+      },
+      {
+        heading: '3. Pagos y facturación',
+        body: 'Los proyectos requieren un anticipo del 50% para iniciar el desarrollo. El saldo restante se cancela al entregar el proyecto. Los pagos pueden realizarse mediante transferencia bancaria o medios acordados con el cliente.',
+      },
+      {
+        heading: '4. Propiedad intelectual',
+        body: 'Una vez liquidado el pago total, el cliente adquiere todos los derechos sobre el producto final. WavDevelop conserva el derecho de incluir el proyecto en su portafolio salvo acuerdo contrario.',
+      },
+      {
+        heading: '5. Garantía y soporte',
+        body: 'WavDevelop ofrece 30 días de garantía post-entrega para corrección de errores sin costo adicional. El mantenimiento y nuevas funciones posteriores a este período se cotizan por separado.',
+      },
+      {
+        heading: '6. Limitación de responsabilidad',
+        body: 'WavDevelop no se responsabiliza por daños derivados del uso indebido del software entregado, ataques de terceros o interrupciones de servicios externos (hosting, APIs, etc.) fuera de nuestro control.',
+      },
+    ],
+  },
+  'Privacidad': {
+    titulo: 'Política de Privacidad',
+    secciones: [
+      {
+        heading: '1. Datos que recopilamos',
+        body: 'Recopilamos únicamente los datos necesarios para brindar nuestros servicios: nombre, correo electrónico, número de teléfono y detalles del proyecto. No recopilamos datos sensibles sin consentimiento explícito.',
+      },
+      {
+        heading: '2. Uso de la información',
+        body: 'Los datos recopilados se utilizan exclusivamente para gestionar cotizaciones, proyectos y comunicaciones relacionadas con nuestros servicios. No vendemos ni compartimos información personal con terceros.',
+      },
+      {
+        heading: '3. Almacenamiento y seguridad',
+        body: 'La información se almacena en servidores seguros con cifrado. Aplicamos medidas técnicas y organizativas para proteger tus datos contra acceso no autorizado, pérdida o alteración.',
+      },
+      {
+        heading: '4. Tus derechos',
+        body: 'Tienes derecho a acceder, corregir o solicitar la eliminación de tus datos personales en cualquier momento. Para ejercer estos derechos, contáctanos a ventas@wavdevelop.com.',
+      },
+      {
+        heading: '5. Cookies',
+        body: 'Este sitio utiliza cookies técnicas necesarias para el funcionamiento correcto. No utilizamos cookies de rastreo publicitario de terceros sin tu consentimiento.',
+      },
+      {
+        heading: '6. Cambios a esta política',
+        body: 'Podemos actualizar esta política ocasionalmente. Te notificaremos por correo electrónico si hay cambios significativos que afecten tus derechos.',
+      },
+    ],
+  },
+  'Política de Cookies': {
+    titulo: 'Política de Cookies',
+    secciones: [
+      {
+        heading: '¿Qué son las cookies?',
+        body: 'Las cookies son pequeños archivos de texto que los sitios web guardan en tu dispositivo para recordar preferencias y mejorar tu experiencia de navegación.',
+      },
+      {
+        heading: 'Cookies que utilizamos',
+        body: 'Este sitio utiliza únicamente cookies técnicas esenciales para el correcto funcionamiento de la navegación (scroll, animaciones, estado del menú). No utilizamos cookies de seguimiento o publicidad.',
+      },
+      {
+        heading: 'Cookies de terceros',
+        body: 'Algunas funcionalidades pueden cargar recursos de terceros (fuentes de Google, íconos). Estos servicios pueden establecer sus propias cookies según sus políticas de privacidad.',
+      },
+      {
+        heading: 'Control de cookies',
+        body: 'Puedes configurar tu navegador para rechazar o eliminar cookies en cualquier momento. Ten en cuenta que desactivar cookies esenciales puede afectar el funcionamiento del sitio.',
+      },
+      {
+        heading: 'Contacto',
+        body: 'Si tienes preguntas sobre el uso de cookies en este sitio, escríbenos a ventas@wavdevelop.com y te responderemos a la brevedad.',
+      },
+    ],
+  },
+}
+
+function LegalModal({ type, onClose }) {
+  const content = LEGAL_CONTENT[type]
+  if (!content) return null
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        className="fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={onClose}
+      >
+        <div className="absolute inset-0" style={{ background: 'rgba(4,12,16,0.85)', backdropFilter: 'blur(8px)' }} />
+        <motion.div
+          className="relative w-full sm:max-w-2xl max-h-[90vh] sm:max-h-[80vh] overflow-hidden flex flex-col rounded-t-2xl sm:rounded-2xl"
+          style={{ background: '#061A25', border: '1px solid rgba(27,188,216,0.2)' }}
+          initial={{ y: 60, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 60, opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between px-6 py-5 border-b border-white/8 flex-shrink-0">
+            <h2 className="font-display font-bold text-white text-lg">{content.titulo}</h2>
+            <button
+              onClick={onClose}
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all"
+            >
+              <FiX size={18} />
+            </button>
+          </div>
+
+          {/* Content */}
+          <div className="overflow-y-auto px-6 py-6 space-y-6 flex-1">
+            {content.secciones.map((s, i) => (
+              <div key={i}>
+                <h3 className="font-semibold text-sm mb-2" style={{ color: '#1BBCD8' }}>{s.heading}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{s.body}</p>
+              </div>
+            ))}
+            <p className="text-slate-600 text-xs pt-4 border-t border-white/5">
+              Última actualización: enero {new Date().getFullYear()} · WavDevelop, Guatemala
+            </p>
+          </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════════
 //  FOOTER
 // ═══════════════════════════════════════════════════════════════
 function Footer() {
-  const cols = {
-    Servicios: ['Desarrollo Web', 'Apps Móviles', 'Sistemas a Medida', 'Outsourcing TI'],
-    Empresa:   ['Nosotros', 'Portafolio', 'Blog', 'Carreras'],
-    Legal:     ['Términos de Servicio', 'Privacidad', 'Política de Cookies'],
+  const [legalModal, setLegalModal] = useState(null)
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id)
+    if (el) window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
   }
 
-  return (
-    <footer className="border-t border-white/6" style={{ background: '#040C10' }}>
-      {/* LinkedIn CTA */}
-      <div className="py-16 text-center border-b border-white/5">
-        <BlurIn className="text-slate-600 text-sm mb-6">
-          ¿Buscas un socio tecnológico de confianza?
-        </BlurIn>
-        <motion.a
-          href={LI_URL} target="_blank" rel="noopener noreferrer"
-          whileHover={{ scale: 1.06, y: -3 }} whileTap={{ scale: 0.97 }}
-          className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-white transition-all"
-          style={{ background: '#0A66C2', boxShadow: '0 8px 40px rgba(10,102,194,0.4)' }}
-        >
-          <FaLinkedin size={22} />
-          Conéctate con nosotros en LinkedIn
-        </motion.a>
-      </div>
+  const COLS = [
+    {
+      cat: 'Servicios',
+      links: [
+        { label: 'Desarrollo Web',    action: () => scrollTo('servicios') },
+        { label: 'Apps Móviles',      action: () => scrollTo('servicios') },
+        { label: 'Sistemas a Medida', action: () => scrollTo('servicios') },
+        { label: 'Outsourcing TI',    action: () => scrollTo('servicios') },
+      ],
+    },
+    {
+      cat: 'Empresa',
+      links: [
+        { label: 'Nosotros',   action: () => scrollTo('historia') },
+        { label: 'Portafolio', action: () => scrollTo('portafolio') },
+        { label: 'Blog',       action: () => scrollTo('contacto'), badge: 'Próx.' },
+        { label: 'Carreras',   action: () => scrollTo('contacto'), badge: 'Próx.' },
+      ],
+    },
+    {
+      cat: 'Legal',
+      links: [
+        { label: 'Términos de Servicio', action: () => setLegalModal('Términos de Servicio') },
+        { label: 'Privacidad',           action: () => setLegalModal('Privacidad') },
+        { label: 'Política de Cookies',  action: () => setLegalModal('Política de Cookies') },
+      ],
+    },
+  ]
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
-          <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <img src="/images/wavdev.png" alt="WavDevelop" className="w-9 h-9 object-contain" />
-              <span className="font-display font-bold text-lg text-white">WavDevelop</span>
-            </div>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4">Transformando ideas en soluciones digitales</p>
-            <div className="space-y-1.5">
-              <p className="text-slate-700 text-xs">ventas@wavdevelop.com</p>
-              <p className="text-slate-700 text-xs">+502 3853 6836</p>
-              <p className="text-slate-700 text-xs">Guatemala · Cobán · Jutiapa</p>
-            </div>
-          </div>
-          {Object.entries(cols).map(([cat, links]) => (
-            <div key={cat}>
-              <h4 className="text-white font-semibold text-sm mb-4">{cat}</h4>
-              <ul className="space-y-2.5">
-                {links.map((l) => (
-                  <li key={l}>
-                    <span className="text-slate-600 text-sm hover:text-slate-300 transition-colors cursor-pointer">{l}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+  return (
+    <>
+      {legalModal && <LegalModal type={legalModal} onClose={() => setLegalModal(null)} />}
+
+      <footer className="border-t border-white/6" style={{ background: '#040C10' }}>
+        {/* LinkedIn CTA */}
+        <div className="py-16 text-center border-b border-white/5">
+          <BlurIn className="text-slate-600 text-sm mb-6">
+            ¿Buscas un socio tecnológico de confianza?
+          </BlurIn>
+          <motion.a
+            href={LI_URL} target="_blank" rel="noopener noreferrer"
+            whileHover={{ scale: 1.06, y: -3 }} whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-white transition-all"
+            style={{ background: '#0A66C2', boxShadow: '0 8px 40px rgba(10,102,194,0.4)' }}
+          >
+            <FaLinkedin size={22} />
+            Conéctate con nosotros en LinkedIn
+          </motion.a>
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-700 text-sm">© 2025 WavDevelop. Todos los derechos reservados.</p>
-          <div className="flex gap-2.5">
-            {[
-              { href: WA_URL, Icon: FaWhatsapp, hoverColor: 'text-green-400' },
-              { href: LI_URL, Icon: FaLinkedin, hoverColor: 'text-blue-400' },
-            ].map(({ href, Icon, hoverColor }, i) => (
-              <motion.a key={i} href={href} target="_blank" rel="noopener noreferrer"
-                whileHover={{ scale: 1.15 }}
-                className={`w-9 h-9 rounded-lg border border-white/8 flex items-center justify-center hover:bg-white/5 transition-all group`}>
-                <Icon className={`text-slate-600 group-hover:${hoverColor} transition-colors`} size={15} />
-              </motion.a>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid md:grid-cols-4 gap-10 mb-12">
+            <div>
+              <div className="flex items-center gap-2.5 mb-4">
+                <img src="/images/wavdev.webp" alt="WavDevelop" className="w-9 h-9 object-contain" />
+                <span className="font-display font-bold text-lg text-white">WavDevelop</span>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">Transformando ideas en soluciones digitales</p>
+              <div className="space-y-1.5">
+                <p className="text-slate-700 text-xs">ventas@wavdevelop.com</p>
+                <p className="text-slate-700 text-xs">+502 3853 6836</p>
+                <p className="text-slate-700 text-xs">Guatemala · Cobán · Jutiapa</p>
+              </div>
+            </div>
+
+            {COLS.map(({ cat, links }) => (
+              <div key={cat}>
+                <h4 className="text-white font-semibold text-sm mb-4">{cat}</h4>
+                <ul className="space-y-2.5">
+                  {links.map(({ label, action, badge }) => (
+                    <li key={label}>
+                      <button
+                        onClick={action}
+                        className="flex items-center gap-2 text-slate-600 text-sm hover:text-slate-200 transition-colors text-left"
+                      >
+                        {label}
+                        {badge && (
+                          <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+                            style={{ background: 'rgba(27,188,216,0.15)', color: '#1BBCD8', border: '1px solid rgba(27,188,216,0.3)' }}>
+                            {badge}
+                          </span>
+                        )}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
+
+          <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-slate-700 text-sm">© {new Date().getFullYear()} WavDevelop. Todos los derechos reservados.</p>
+            <div className="flex gap-2.5">
+              {[
+                { href: WA_URL, Icon: FaWhatsapp, hoverColor: 'text-green-400' },
+                { href: LI_URL, Icon: FaLinkedin, hoverColor: 'text-blue-400' },
+              ].map(({ href, Icon, hoverColor }, i) => (
+                <motion.a key={i} href={href} target="_blank" rel="noopener noreferrer"
+                  whileHover={{ scale: 1.15 }}
+                  className="w-9 h-9 rounded-lg border border-white/8 flex items-center justify-center hover:bg-white/5 transition-all group">
+                  <Icon className={`text-slate-600 group-hover:${hoverColor} transition-colors`} size={15} />
+                </motion.a>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   )
 }
 

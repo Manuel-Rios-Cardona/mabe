@@ -17,6 +17,19 @@
 }
 
 @layer utilities {
+  /* Fix 100vh en iOS Safari */
+  .h-screen-real {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  /* overflow-clip en lugar de overflow-hidden para permitir position:sticky en iOS */
+  .overflow-clip-ios {
+    overflow: hidden;
+    overflow: clip;
+  }
+
+
   /* Infinite carousel animations */
   .animate-scroll-up {
     animation: scrollUp 35s linear infinite;
