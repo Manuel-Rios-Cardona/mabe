@@ -1,5 +1,5 @@
 /**
- * WavDevelop — Scrollytelling SPA
+ * WavDev — Scrollytelling SPA
  * Experiencia inmersiva con scroll-driven storytelling
  */
 
@@ -321,8 +321,8 @@ function SEOMeta() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${SITE_URL}/#organization`,
-    name: 'WavDevelop',
-    alternateName: 'Wav Develop',
+    name: 'WavDev',
+    alternateName: 'WavDev',
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo.png`,
     image: OG_IMAGE,
@@ -364,7 +364,7 @@ function SEOMeta() {
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     url: SITE_URL,
-    name: 'WavDevelop',
+    name: 'WavDev',
     description: 'Agencia de desarrollo web y apps móviles en Guatemala',
     publisher: { '@id': `${SITE_URL}/#organization` },
     inLanguage: 'es-GT',
@@ -391,15 +391,15 @@ function SEOMeta() {
     'desarrollo web Ciudad de Guatemala',
     'diseño UX UI Guatemala',
     'desarrollo web profesional',
-    'WavDevelop',
+    'WavDev',
   ].join(', ')
 
   return (
     <Helmet>
-      <title>WavDevelop | Desarrollo Web y Apps Móviles en Guatemala</title>
+      <title>WavDev | Desarrollo Web y Apps Móviles en Guatemala</title>
       <meta name="description" content="Agencia de desarrollo web profesional en Guatemala. Creamos páginas web, apps móviles Android e iOS, sistemas a la medida y outsourcing TI. ¡Cotiza gratis!" />
       <meta name="keywords" content={KEYWORDS} />
-      <meta name="author" content="WavDevelop" />
+      <meta name="author" content="WavDev" />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="theme-color" content="#1BBCD8" />
 
@@ -411,24 +411,24 @@ function SEOMeta() {
       <meta name="language" content="es" />
 
       {/* Open Graph / Facebook / WhatsApp / LinkedIn */}
-      <meta property="og:site_name" content="WavDevelop" />
+      <meta property="og:site_name" content="WavDev" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={SITE_URL} />
-      <meta property="og:title" content="WavDevelop | Desarrollo Web y Apps Móviles en Guatemala" />
+      <meta property="og:title" content="WavDev | Desarrollo Web y Apps Móviles en Guatemala" />
       <meta property="og:description" content="Construimos tu presencia digital. Páginas web, apps móviles, sistemas a la medida y outsourcing TI en Guatemala. Más de 50 proyectos entregados." />
       <meta property="og:image" content={OG_IMAGE} />
-      <meta property="og:image:alt" content="WavDevelop — Agencia de Desarrollo Web en Guatemala" />
+      <meta property="og:image:alt" content="WavDev — Agencia de Desarrollo Web en Guatemala" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="es_GT" />
 
       {/* Twitter / X */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@wavdevelop" />
-      <meta name="twitter:title" content="WavDevelop | Desarrollo Web y Apps Móviles en Guatemala" />
+      <meta name="twitter:site" content="@wavdev" />
+      <meta name="twitter:title" content="WavDev | Desarrollo Web y Apps Móviles en Guatemala" />
       <meta name="twitter:description" content="Construimos tu presencia digital. Páginas web, apps móviles y sistemas a la medida en Guatemala." />
       <meta name="twitter:image" content={OG_IMAGE} />
-      <meta name="twitter:image:alt" content="WavDevelop — Agencia de Desarrollo Web en Guatemala" />
+      <meta name="twitter:image:alt" content="WavDev — Agencia de Desarrollo Web en Guatemala" />
 
       <link rel="canonical" href={SITE_URL} />
       <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -473,8 +473,8 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2.5 select-none">
-            <img src="/images/wavdev.webp" alt="WavDevelop" className="w-9 h-9 object-contain" />
-            <span className="font-display font-bold text-lg text-white tracking-tight">WavDevelop</span>
+            <img src="/images/wavdev.webp" alt="WavDev" className="w-9 h-9 object-contain" />
+            <span className="font-display font-bold text-lg text-white tracking-tight">WavDev</span>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
@@ -1365,7 +1365,7 @@ function ServicesChapter({ onEnter }) {
                             border: '1px solid rgba(255,255,255,0.07)',
                           }}
                         >
-                          wavdevelop.com / {svc.title.toLowerCase().replace(/\s/g, '-')}
+                          wavdev.lat / {svc.title.toLowerCase().replace(/\s/g, '-')}
                         </div>
                         <div
                           className="flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-mono shrink-0"
@@ -2249,7 +2249,7 @@ function ContactChapter({ onEnter }) {
           <BlurIn delay={0.25} className="space-y-7">
             <div className="space-y-4">
               {[
-                { Icon: FiMail, text: 'ventas@wavdevelop.com', href: 'mailto:ventas@wavdevelop.com' },
+                { Icon: FiMail, text: 'ventas@wavdev.com', href: 'mailto:ventas@wavdev.com' },
                 { Icon: FiPhone, text: '+502 3853 6836', href: 'tel:+50238536836' },
                 { Icon: FiMapPin, text: 'Guatemala City · Cobán · Jutiapa', href: null },
               ].map(({ Icon, text, href }, i) => (
@@ -2308,11 +2308,11 @@ const LEGAL_CONTENT = {
     secciones: [
       {
         heading: '1. Aceptación de los términos',
-        body: 'Al contratar los servicios de WavDevelop, el cliente acepta los presentes términos y condiciones en su totalidad. WavDevelop se reserva el derecho de modificar estos términos en cualquier momento con previo aviso.',
+        body: 'Al contratar los servicios de WavDev, el cliente acepta los presentes términos y condiciones en su totalidad. WavDev se reserva el derecho de modificar estos términos en cualquier momento con previo aviso.',
       },
       {
         heading: '2. Servicios ofrecidos',
-        body: 'WavDevelop ofrece servicios de desarrollo web, aplicaciones móviles, sistemas a la medida y outsourcing de TI. Cada proyecto se rige por un contrato específico que detalla alcance, plazos y costos acordados.',
+        body: 'WavDev ofrece servicios de desarrollo web, aplicaciones móviles, sistemas a la medida y outsourcing de TI. Cada proyecto se rige por un contrato específico que detalla alcance, plazos y costos acordados.',
       },
       {
         heading: '3. Pagos y facturación',
@@ -2320,15 +2320,15 @@ const LEGAL_CONTENT = {
       },
       {
         heading: '4. Propiedad intelectual',
-        body: 'Una vez liquidado el pago total, el cliente adquiere todos los derechos sobre el producto final. WavDevelop conserva el derecho de incluir el proyecto en su portafolio salvo acuerdo contrario.',
+        body: 'Una vez liquidado el pago total, el cliente adquiere todos los derechos sobre el producto final. WavDev conserva el derecho de incluir el proyecto en su portafolio salvo acuerdo contrario.',
       },
       {
         heading: '5. Garantía y soporte',
-        body: 'WavDevelop ofrece 30 días de garantía post-entrega para corrección de errores sin costo adicional. El mantenimiento y nuevas funciones posteriores a este período se cotizan por separado.',
+        body: 'WavDev ofrece 30 días de garantía post-entrega para corrección de errores sin costo adicional. El mantenimiento y nuevas funciones posteriores a este período se cotizan por separado.',
       },
       {
         heading: '6. Limitación de responsabilidad',
-        body: 'WavDevelop no se responsabiliza por daños derivados del uso indebido del software entregado, ataques de terceros o interrupciones de servicios externos (hosting, APIs, etc.) fuera de nuestro control.',
+        body: 'WavDev no se responsabiliza por daños derivados del uso indebido del software entregado, ataques de terceros o interrupciones de servicios externos (hosting, APIs, etc.) fuera de nuestro control.',
       },
     ],
   },
@@ -2349,7 +2349,7 @@ const LEGAL_CONTENT = {
       },
       {
         heading: '4. Tus derechos',
-        body: 'Tienes derecho a acceder, corregir o solicitar la eliminación de tus datos personales en cualquier momento. Para ejercer estos derechos, contáctanos a ventas@wavdevelop.com.',
+        body: 'Tienes derecho a acceder, corregir o solicitar la eliminación de tus datos personales en cualquier momento. Para ejercer estos derechos, contáctanos a ventas@wavdev.com.',
       },
       {
         heading: '5. Cookies',
@@ -2382,7 +2382,7 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'Contacto',
-        body: 'Si tienes preguntas sobre el uso de cookies en este sitio, escríbenos a ventas@wavdevelop.com y te responderemos a la brevedad.',
+        body: 'Si tienes preguntas sobre el uso de cookies en este sitio, escríbenos a ventas@wavdev.com y te responderemos a la brevedad.',
       },
     ],
   },
@@ -2431,7 +2431,7 @@ function LegalModal({ type, onClose }) {
               </div>
             ))}
             <p className="text-slate-600 text-xs pt-4 border-t border-white/5">
-              Última actualización: enero {new Date().getFullYear()} · WavDevelop, Guatemala
+              Última actualización: enero {new Date().getFullYear()} · WavDev, Guatemala
             </p>
           </div>
         </motion.div>
@@ -2505,12 +2505,12 @@ function Footer() {
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <img src="/images/wavdev.webp" alt="WavDevelop" className="w-9 h-9 object-contain" />
-                <span className="font-display font-bold text-lg text-white">WavDevelop</span>
+                <img src="/images/wavdev.webp" alt="WavDev" className="w-9 h-9 object-contain" />
+                <span className="font-display font-bold text-lg text-white">WavDev</span>
               </div>
               <p className="text-slate-600 text-sm leading-relaxed mb-4">Transformando ideas en soluciones digitales</p>
               <div className="space-y-1.5">
-                <p className="text-slate-700 text-xs">ventas@wavdevelop.com</p>
+                <p className="text-slate-700 text-xs">ventas@wavdev.com</p>
                 <p className="text-slate-700 text-xs">+502 3853 6836</p>
                 <p className="text-slate-700 text-xs">Guatemala · Cobán · Jutiapa</p>
               </div>
@@ -2542,7 +2542,7 @@ function Footer() {
           </div>
 
           <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-slate-700 text-sm">© {new Date().getFullYear()} WavDevelop. Todos los derechos reservados.</p>
+            <p className="text-slate-700 text-sm">© {new Date().getFullYear()} WavDev. Todos los derechos reservados.</p>
             <div className="flex gap-2.5">
               {[
                 { href: WA_URL, Icon: FaWhatsapp, hoverColor: 'text-green-400' },
