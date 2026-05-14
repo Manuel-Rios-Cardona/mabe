@@ -314,29 +314,125 @@ function ParticlesBg() {
 //  SEO META
 // ═══════════════════════════════════════════════════════════════
 function SEOMeta() {
-  const schema = {
+  const SITE_URL = 'https://wavdev.lat'
+  const OG_IMAGE = `${SITE_URL}/images/wavdev.png`
+
+  const schemaOrg = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'LocalBusiness',
+    '@id': `${SITE_URL}/#organization`,
     name: 'WavDevelop',
-    url: 'https://wavdevelop.com',
-    description: 'Agencia de desarrollo web, apps móviles y sistemas a la medida en Guatemala',
-    address: { '@type': 'PostalAddress', addressCountry: 'GT', addressLocality: 'Guatemala City' },
-    contactPoint: { '@type': 'ContactPoint', telephone: '+502-3853-6836', email: 'ventas@wavdevelop.com' },
+    alternateName: 'Wav Develop',
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/logo.png`,
+    image: OG_IMAGE,
+    description: 'Agencia de desarrollo web profesional, apps móviles Android e iOS, sistemas a la medida y outsourcing de TI en Guatemala.',
+    priceRange: '$$',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'GT',
+      addressLocality: 'Guatemala City',
+      addressRegion: 'Guatemala',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '14.6349',
+      longitude: '-90.5069',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+502-3853-6836',
+      email: 'ventas@wavdev.lat',
+      contactType: 'sales',
+      availableLanguage: 'Spanish',
+    },
     sameAs: [LI_URL, WA_URL],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Servicios de Desarrollo de Software',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Desarrollo Web Profesional', description: 'Sitios web modernos, responsivos y optimizados para buscadores.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Aplicaciones Móviles Android e iOS', description: 'Apps nativas y multiplataforma con Flutter y React Native.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sistemas a la Medida', description: 'Software empresarial personalizado para optimizar procesos.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Outsourcing de TI', description: 'Equipo de desarrolladores especializados bajo demanda.' } },
+      ],
+    },
   }
+
+  const schemaWebSite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: 'WavDevelop',
+    description: 'Agencia de desarrollo web y apps móviles en Guatemala',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    inLanguage: 'es-GT',
+  }
+
+  const KEYWORDS = [
+    'desarrollo web Guatemala',
+    'diseño web Guatemala',
+    'agencia de desarrollo web Guatemala',
+    'crear página web Guatemala',
+    'páginas web profesionales Guatemala',
+    'desarrollo de aplicaciones móviles Guatemala',
+    'apps Android iOS Guatemala',
+    'Flutter developer Guatemala',
+    'React Native Guatemala',
+    'sistemas a la medida Guatemala',
+    'software empresarial Guatemala',
+    'outsourcing TI Guatemala',
+    'programadores Guatemala',
+    'empresa de tecnología Guatemala',
+    'agencia digital Guatemala',
+    'tienda online Guatemala',
+    'e-commerce Guatemala',
+    'desarrollo web Ciudad de Guatemala',
+    'diseño UX UI Guatemala',
+    'desarrollo web profesional',
+    'WavDevelop',
+  ].join(', ')
+
   return (
     <Helmet>
-      <title>WavDevelop — Desarrollo Web y Apps Móviles en Guatemala</title>
-      <meta name="description" content="Agencia de desarrollo web profesional, apps móviles Android iOS, sistemas a la medida y outsourcing TI en Guatemala." />
-      <meta name="keywords" content="desarrollo web Guatemala, diseño web profesional, aplicaciones móviles Android iOS, sistemas a la medida, outsourcing TI Guatemala" />
-      <meta property="og:title" content="WavDevelop — Desarrollo Web y Apps en Guatemala" />
-      <meta property="og:description" content="Construimos tu presencia digital. Desarrollo web, apps móviles y sistemas a la medida." />
+      <title>WavDevelop | Desarrollo Web y Apps Móviles en Guatemala</title>
+      <meta name="description" content="Agencia de desarrollo web profesional en Guatemala. Creamos páginas web, apps móviles Android e iOS, sistemas a la medida y outsourcing TI. ¡Cotiza gratis!" />
+      <meta name="keywords" content={KEYWORDS} />
+      <meta name="author" content="WavDevelop" />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="theme-color" content="#1BBCD8" />
+
+      {/* Geo tags para posicionamiento local en Guatemala */}
+      <meta name="geo.region" content="GT" />
+      <meta name="geo.placename" content="Guatemala City, Guatemala" />
+      <meta name="geo.position" content="14.6349;-90.5069" />
+      <meta name="ICBM" content="14.6349, -90.5069" />
+      <meta name="language" content="es" />
+
+      {/* Open Graph / Facebook / WhatsApp / LinkedIn */}
+      <meta property="og:site_name" content="WavDevelop" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://wavdevelop.com" />
+      <meta property="og:url" content={SITE_URL} />
+      <meta property="og:title" content="WavDevelop | Desarrollo Web y Apps Móviles en Guatemala" />
+      <meta property="og:description" content="Construimos tu presencia digital. Páginas web, apps móviles, sistemas a la medida y outsourcing TI en Guatemala. Más de 50 proyectos entregados." />
+      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image:alt" content="WavDevelop — Agencia de Desarrollo Web en Guatemala" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:locale" content="es_GT" />
+
+      {/* Twitter / X */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://wavdevelop.com" />
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      <meta name="twitter:site" content="@wavdevelop" />
+      <meta name="twitter:title" content="WavDevelop | Desarrollo Web y Apps Móviles en Guatemala" />
+      <meta name="twitter:description" content="Construimos tu presencia digital. Páginas web, apps móviles y sistemas a la medida en Guatemala." />
+      <meta name="twitter:image" content={OG_IMAGE} />
+      <meta name="twitter:image:alt" content="WavDevelop — Agencia de Desarrollo Web en Guatemala" />
+
+      <link rel="canonical" href={SITE_URL} />
+      <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
+      <script type="application/ld+json">{JSON.stringify(schemaWebSite)}</script>
     </Helmet>
   )
 }
