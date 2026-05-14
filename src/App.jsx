@@ -342,7 +342,7 @@ function SEOMeta() {
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+502-3853-6836',
-      email: 'ventas@wavdev.lat',
+      email: 'contactowavdev@gmail.com',
       contactType: 'sales',
       availableLanguage: 'Spanish',
     },
@@ -2249,7 +2249,7 @@ function ContactChapter({ onEnter }) {
           <BlurIn delay={0.25} className="space-y-7">
             <div className="space-y-4">
               {[
-                { Icon: FiMail, text: 'ventas@wavdev.com', href: 'mailto:ventas@wavdev.com' },
+                { Icon: FiMail, text: 'contactowavdev@gmail.com', href: 'mailto:contactowavdev@gmail.com' },
                 { Icon: FiPhone, text: '+502 3853 6836', href: 'tel:+50238536836' },
                 { Icon: FiMapPin, text: 'Guatemala City · Cobán · Jutiapa', href: null },
               ].map(({ Icon, text, href }, i) => (
@@ -2349,7 +2349,7 @@ const LEGAL_CONTENT = {
       },
       {
         heading: '4. Tus derechos',
-        body: 'Tienes derecho a acceder, corregir o solicitar la eliminación de tus datos personales en cualquier momento. Para ejercer estos derechos, contáctanos a ventas@wavdev.com.',
+        body: 'Tienes derecho a acceder, corregir o solicitar la eliminación de tus datos personales en cualquier momento. Para ejercer estos derechos, contáctanos a contactowavdev@gmail.com.',
       },
       {
         heading: '5. Cookies',
@@ -2382,7 +2382,7 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'Contacto',
-        body: 'Si tienes preguntas sobre el uso de cookies en este sitio, escríbenos a ventas@wavdev.com y te responderemos a la brevedad.',
+        body: 'Si tienes preguntas sobre el uso de cookies en este sitio, escríbenos a contactowavdev@gmail.com y te responderemos a la brevedad.',
       },
     ],
   },
@@ -2510,7 +2510,7 @@ function Footer() {
               </div>
               <p className="text-slate-600 text-sm leading-relaxed mb-4">Transformando ideas en soluciones digitales</p>
               <div className="space-y-1.5">
-                <p className="text-slate-700 text-xs">ventas@wavdev.com</p>
+                <p className="text-slate-700 text-xs">contactowavdev@gmail.com</p>
                 <p className="text-slate-700 text-xs">+502 3853 6836</p>
                 <p className="text-slate-700 text-xs">Guatemala · Cobán · Jutiapa</p>
               </div>
