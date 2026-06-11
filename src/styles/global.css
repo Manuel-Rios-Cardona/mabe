@@ -1,12 +1,12 @@
 :root {
-  --ink: #040c10;
-  --ink-soft: #071820;
-  --panel: #0a202a;
-  --cyan: #1bbcd8;
-  --cyan-bright: #0deaff;
-  --cream: #f4f2ea;
-  --muted: #9aabb4;
-  --line: rgba(255, 255, 255, 0.1);
+  --ink: #ffffff;
+  --ink-soft: #f8f9fa;
+  --panel: #f0f2f5;
+  --cyan: #ff6b35;
+  --cyan-bright: #ff8c42;
+  --cream: #0f0f0f;
+  --muted: #666666;
+  --line: rgba(0, 0, 0, 0.08);
   --radius: 24px;
   --max: 1180px;
 }
@@ -17,15 +17,15 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--ink);
+  background: #ffffff;
 }
 
 body {
   margin: 0;
   color: var(--cream);
   background:
-    radial-gradient(circle at 85% 5%, rgba(27, 188, 216, 0.14), transparent 28rem),
-    linear-gradient(180deg, var(--ink), #051219 50%, var(--ink));
+    radial-gradient(circle at 85% 5%, rgba(255, 107, 53, 0.08), transparent 28rem),
+    linear-gradient(180deg, #ffffff, #f8f9fa 50%, #ffffff);
   font-family: "Segoe UI", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.65;
@@ -360,8 +360,8 @@ p {
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(4, 12, 16, 0.82);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(18px);
 }
 
@@ -396,7 +396,7 @@ p {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  color: #b7c4ca;
+  color: #555555;
   font-size: 0.92rem;
 }
 
@@ -410,7 +410,7 @@ p {
   display: none;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #0f0f0f;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: transparent;
