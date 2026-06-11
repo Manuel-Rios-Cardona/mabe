@@ -6,6 +6,9 @@ export const SITE = {
   phone: '+50238536836',
   whatsapp: 'https://wa.me/50238536836',
   linkedin: 'https://www.linkedin.com/in/hector-wavdev/',
+  youtube: '', // Add YouTube channel URL when available
+  instagram: '', // Add Instagram profile URL when available
+  twitter: '', // Add Twitter profile URL when available
   serviceAreas: ['Ciudad de Guatemala', 'Cobán', 'Jutiapa'],
 }
 
