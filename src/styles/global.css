@@ -1092,6 +1092,157 @@ p {
   }
 }
 
+.trends-hero {
+  background:
+    radial-gradient(circle at 82% 15%, rgba(255, 92, 53, 0.28), transparent 18rem),
+    radial-gradient(circle at 68% 62%, rgba(199, 243, 107, 0.55), transparent 22rem),
+    linear-gradient(135deg, var(--cream), #eaf7ff);
+}
+
+.trend-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.live-indicator i {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 5px rgba(199, 243, 107, 0.22);
+}
+
+.trend-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.trend-card {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 2.5rem);
+  padding: clamp(1.3rem, 4vw, 2.4rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.78);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.trend-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 92, 53, 0.35);
+  box-shadow: var(--shadow);
+}
+
+.trend-rank {
+  color: var(--orange);
+  font-family: "Space Grotesk Variable", sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.trend-card-meta,
+.trend-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.7rem 1.5rem;
+}
+
+.trend-card-meta {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.trend-card h2 {
+  margin: 1rem 0;
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+}
+
+.trend-card p {
+  max-width: 820px;
+  color: var(--muted);
+}
+
+.trend-links {
+  margin-top: 1.5rem;
+}
+
+.trend-links a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.trend-links a:last-child {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.trend-method p {
+  color: #d2dce5;
+}
+
+.trend-disclosure {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.86rem;
+}
+
+.trends-promo-section {
+  padding-bottom: 0;
+}
+
+.trends-promo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  color: #ffffff;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 80% 20%, rgba(199, 243, 107, 0.32), transparent 17rem),
+    var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.trends-promo h2 {
+  margin: 0.65rem 0;
+  color: #ffffff;
+}
+
+.trends-promo p {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: #c7d2dd;
+}
+
+.trends-promo-action {
+  flex: 0 0 auto;
+  color: var(--lime);
+  font-weight: 850;
+}
+
 @media (max-width: 560px) {
   h1 {
     font-size: clamp(2.8rem, 15vw, 4.3rem);
@@ -1113,6 +1264,19 @@ p {
 
   .console-metric {
     min-height: 88px;
+  }
+
+  .trend-card {
+    grid-template-columns: 1fr;
+  }
+
+  .trend-rank {
+    font-size: 2rem;
+  }
+
+  .trends-promo {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
