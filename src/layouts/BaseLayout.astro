@@ -81,7 +81,7 @@ const schemasCombined = schemaItems.filter((item, index, items) => {
     <meta name="theme-color" content="#ffffff" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large'} />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large'} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/webp" href="/images/logo.webp" />
     {googleVerification && <meta name="google-site-verification" content={googleVerification} />}
@@ -140,6 +140,8 @@ const schemasCombined = schemaItems.filter((item, index, items) => {
         if (href.startsWith('tel:')) window.trackWavDevEvent('phone_click', parameters);
         if (href.startsWith('mailto:')) window.trackWavDevEvent('email_click', parameters);
         if (link.dataset.cta === 'quote') window.trackWavDevEvent('quote_click', parameters);
+        if (link.hasAttribute('download') || link.dataset.download) window.trackWavDevEvent('file_download', parameters);
+        if (link.dataset.video) window.trackWavDevEvent('video_play', parameters);
       });
     </script>
   </head>

@@ -4,8 +4,8 @@ description: "Guía para sincronizar productos, existencias, pedidos y precios e
 slug: "como-conectar-tienda-inventario"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "E-commerce"
 service: "E-commerce"
 industry: "Comercio"

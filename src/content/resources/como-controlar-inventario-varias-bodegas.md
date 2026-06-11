@@ -4,8 +4,8 @@ description: "Método para organizar productos, traslados, conteos, mínimos y m
 slug: "como-controlar-inventario-varias-bodegas"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Inventarios"
 service: "Software de inventarios"
 industry: "Distribución"

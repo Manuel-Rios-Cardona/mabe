@@ -4,8 +4,8 @@ description: "Criterios para comparar sistemas POS, inventario, caja, sucursales
 slug: "como-elegir-sistema-pos-guatemala"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Sistema POS"
 service: "Sistema POS"
 industry: "Comercio"

@@ -4,8 +4,8 @@ description: "Caso de experiencia WavDev: diseño de un pipeline comercial con s
 slug: "crm-automatizacion-ventas"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Caso de éxito"
 service: "CRM para empresas"
 industry: "Ventas"

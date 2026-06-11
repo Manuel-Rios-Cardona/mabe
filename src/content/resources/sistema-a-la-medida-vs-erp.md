@@ -4,8 +4,8 @@ description: "Comparación práctica entre desarrollar software a la medida e im
 slug: "sistema-a-la-medida-vs-erp"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Software empresarial"
 service: "Sistemas a la medida"
 industry: "PYMES"

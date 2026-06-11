@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro'
 import CTA from '../../components/CTA.astro'
 import ResponsiveImage from '../../components/ResponsiveImage.astro'
 import { SITE } from '../../data/site'
+import { AUTHOR } from '../../data/authority'
 
 export const prerender = true
 
@@ -25,7 +26,8 @@ const schema = [
     image: `${SITE.url}${entry.data.featuredImage}`,
     datePublished: entry.data.publishDate.toISOString(),
     dateModified: entry.data.updatedDate.toISOString(),
-    author: { '@type': 'Organization', name: entry.data.author, url: SITE.url },
+    author: { '@type': 'Person', '@id': `${SITE.url}${AUTHOR.profileUrl}#person`, name: AUTHOR.name, url: `${SITE.url}${AUTHOR.profileUrl}` },
+    reviewedBy: { '@type': 'Person', '@id': `${SITE.url}${AUTHOR.profileUrl}#person`, name: AUTHOR.name, url: `${SITE.url}${AUTHOR.profileUrl}` },
     publisher: { '@id': `${SITE.url}/#organization` },
     mainEntityOfPage: canonical,
     inLanguage: 'es-GT',
@@ -51,8 +53,8 @@ const schema = [
         <h1>{entry.data.title}</h1>
         <p class="lead">{entry.data.description}</p>
         <div class="content-meta-row">
-          <span>Por {entry.data.author}</span>
-          <span>Revisado por {entry.data.reviewer}</span>
+          <span>Por <a href={AUTHOR.profileUrl}>{AUTHOR.displayName}</a></span>
+          <span>Revisión técnica: <a href={AUTHOR.profileUrl}>{AUTHOR.name}</a></span>
           <time datetime={entry.data.updatedDate.toISOString()}>Actualizado {entry.data.updatedDate.toLocaleDateString('es-GT', { dateStyle: 'long' })}</time>
         </div>
       </div>

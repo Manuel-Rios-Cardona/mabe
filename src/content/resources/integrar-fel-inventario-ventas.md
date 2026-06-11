@@ -4,8 +4,8 @@ description: "Aspectos técnicos y operativos que deben definirse antes de conec
 slug: "integrar-fel-inventario-ventas"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Integraciones"
 service: "Integración FEL"
 industry: "Comercio"

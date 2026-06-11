@@ -3,7 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Breadcrumbs from './Breadcrumbs.astro'
 import CTA from './CTA.astro'
 import ResponsiveImage from './ResponsiveImage.astro'
+import PriceGuide from './PriceGuide.astro'
 import { SERVICES, SITE, type Service } from '../data/site'
+import { PRICE_GUIDES } from '../data/authority'
 
 interface Props {
   service: Service
@@ -12,6 +14,8 @@ const { service } = Astro.props
 const canonical = `${SITE.url}/servicios/${service.slug}/`
 const whatsapp = `${SITE.whatsapp}?text=${encodeURIComponent(`Hola WavDev, quiero información sobre ${service.shortTitle}.`)}`
 const related = SERVICES.filter((item) => item.slug !== service.slug).slice(0, 3)
+const priceGuide = PRICE_GUIDES[service.slug as keyof typeof PRICE_GUIDES]
+const showRoi = ['sistemas-a-la-medida', 'crm-para-empresas', 'automatizacion-de-procesos'].includes(service.slug)
 const schema = [
   {
     '@context': 'https://schema.org',
@@ -88,6 +92,19 @@ const schema = [
             {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </section>
         ))}
+
+        {priceGuide && <PriceGuide guide={priceGuide} />}
+        {showRoi && (
+          <div class="tool-callout">
+            <span class="eyebrow">Herramienta gratuita</span>
+            <h2>Estima el retorno antes de invertir</h2>
+            <p>Usa horas, personas, errores e inversión para comparar tres escenarios sin enviar información personal.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="/herramientas/calculadora-roi-automatizacion/">Abrir calculadora ROI</a>
+              <a class="button button-secondary" href="/downloads/plantilla-levantamiento-procesos.csv" download data-download="process-template">Descargar plantilla de procesos</a>
+            </div>
+          </div>
+        )}
 
         <section>
           <h2>Cómo desarrollamos el proyecto</h2>

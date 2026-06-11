@@ -4,8 +4,8 @@ description: "Criterios para comparar CRM, preparar datos y lograr que un equipo
 slug: "como-elegir-crm-empresa-guatemala"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "CRM"
 service: "CRM para empresas"
 industry: "Ventas"

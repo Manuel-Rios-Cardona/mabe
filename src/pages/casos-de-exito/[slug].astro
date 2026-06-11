@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro'
 import CTA from '../../components/CTA.astro'
 import ResponsiveImage from '../../components/ResponsiveImage.astro'
 import { SITE } from '../../data/site'
+import { AUTHOR } from '../../data/authority'
 
 export const prerender = true
 
@@ -25,7 +26,8 @@ const schema = [
     image: `${SITE.url}${entry.data.featuredImage}`,
     datePublished: entry.data.publishDate.toISOString(),
     dateModified: entry.data.updatedDate.toISOString(),
-    author: { '@type': 'Organization', name: entry.data.author, url: SITE.url },
+    author: { '@type': 'Person', '@id': `${SITE.url}${AUTHOR.profileUrl}#person`, name: AUTHOR.name, url: `${SITE.url}${AUTHOR.profileUrl}` },
+    reviewedBy: { '@type': 'Person', '@id': `${SITE.url}${AUTHOR.profileUrl}#person`, name: AUTHOR.name, url: `${SITE.url}${AUTHOR.profileUrl}` },
     publisher: { '@id': `${SITE.url}/#organization` },
     about: [entry.data.service, entry.data.industry],
     mainEntityOfPage: canonical,
@@ -55,6 +57,7 @@ const schema = [
           <span>Proyecto: {entry.data.client}</span>
           <span>Servicio: {entry.data.service}</span>
           <span>Evidencia pública: {entry.data.evidenceStatus === 'verified' ? 'verificada' : 'limitada al alcance demostrable'}</span>
+          <span>Revisión técnica: <a href={AUTHOR.profileUrl}>{AUTHOR.name}</a></span>
         </div>
       </div>
     </header>

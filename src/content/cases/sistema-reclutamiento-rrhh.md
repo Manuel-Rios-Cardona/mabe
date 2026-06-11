@@ -4,8 +4,8 @@ description: "Caso de experiencia WavDev: plataforma para organizar procesos de 
 slug: "sistema-reclutamiento-rrhh"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Caso de éxito"
 service: "Sistemas a la medida"
 industry: "Recursos humanos"

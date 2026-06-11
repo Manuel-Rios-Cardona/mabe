@@ -4,8 +4,8 @@ description: "Caso de experiencia WavDev: portal para presentar propiedades, cap
 slug: "plataforma-gestion-inmobiliaria"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Caso de éxito"
 service: "Desarrollo web"
 industry: "Inmobiliaria"

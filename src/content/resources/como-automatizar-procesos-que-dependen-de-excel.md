@@ -4,8 +4,8 @@ description: "Método práctico para identificar, migrar y medir procesos empres
 slug: "como-automatizar-procesos-que-dependen-de-excel"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Automatización"
 service: "Automatización de procesos"
 industry: "Operaciones"

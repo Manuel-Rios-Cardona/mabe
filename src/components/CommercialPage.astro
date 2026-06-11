@@ -2,7 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Breadcrumbs from './Breadcrumbs.astro'
 import CTA from './CTA.astro'
+import PriceGuide from './PriceGuide.astro'
 import { SITE } from '../data/site'
+import { PRICE_GUIDES } from '../data/authority'
 interface Props {
   page: {
     slug: string
@@ -26,6 +28,8 @@ interface Props {
 const { page } = Astro.props
 const sectionLabel = page.section === 'servicios' ? 'Servicios' : 'Soluciones'
 const canonical = `${SITE.url}/${page.section}/${page.slug}/`
+const priceGuide = PRICE_GUIDES[page.slug as keyof typeof PRICE_GUIDES]
+const showRoi = ['erp-para-pymes-guatemala', 'crm-ventas-guatemala', 'automatizar-procesos-con-excel'].includes(page.slug)
 const whatsapp = `${SITE.whatsapp}?text=${encodeURIComponent(`Hola WavDev, quiero información sobre ${page.shortTitle}.`)}`
 const schema = [
   {
@@ -84,6 +88,16 @@ const schema = [
             {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </section>
         ))}
+
+        {priceGuide && <PriceGuide guide={priceGuide} />}
+        {showRoi && (
+          <div class="tool-callout">
+            <span class="eyebrow">Calcula antes de decidir</span>
+            <h2>Compara inversión, tiempo y ahorro</h2>
+            <p>La calculadora utiliza una línea base sencilla para estimar horas recuperables, ahorro anual y período de recuperación.</p>
+            <a class="button button-primary" href="/herramientas/calculadora-roi-automatizacion/">Calcular ROI de automatización</a>
+          </div>
+        )}
 
         <section>
           <h2>Cómo implementamos esta solución</h2>

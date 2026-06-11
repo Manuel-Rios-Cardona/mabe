@@ -4,8 +4,8 @@ description: "Factores, rangos de alcance y preguntas necesarias para cotizar un
 slug: "cuanto-cuesta-pagina-web-profesional-guatemala"
 publishDate: 2026-06-11
 updatedDate: 2026-06-11
-author: "Equipo WavDev"
-reviewer: "Equipo técnico WavDev"
+author: "Héctor"
+reviewer: "Héctor"
 category: "Desarrollo web"
 service: "Desarrollo web"
 industry: "PYMES"

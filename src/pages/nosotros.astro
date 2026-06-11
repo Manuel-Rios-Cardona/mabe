@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Breadcrumbs from '../components/Breadcrumbs.astro'
 import CTA from '../components/CTA.astro'
+import { AUTHOR } from '../data/authority'
 const description = 'Conoce el enfoque de WavDev para diseñar y desarrollar software útil para empresas de Guatemala.'
 ---
 <BaseLayout title="Acerca de WavDev | Empresa de tecnología en Guatemala" description={description}>
@@ -22,6 +23,10 @@ const description = 'Conoce el enfoque de WavDev para diseñar y desarrollar sof
         <h2>Diseño, ingeniería y negocio</h2>
         <p>Una solución empresarial debe ser comprensible, estable y mantenible. Combinamos experiencia de usuario, desarrollo, integraciones y medición para que el producto funcione más allá de una demostración.</p>
         <p>También somos transparentes sobre restricciones, dependencias externas y decisiones que afectan costo o calendario. Preferimos una conversación incómoda a tiempo antes que una sorpresa cuando el proyecto ya está avanzado.</p>
+        <h2>Responsabilidad técnica identificable</h2>
+        <p><a href={AUTHOR.profileUrl}>{AUTHOR.displayName}</a> participa en diagnóstico, arquitectura, revisión técnica y contenidos especializados. La autoría visible permite conocer quién respalda las recomendaciones y qué criterios utiliza.</p>
+        <h2>Soporte después del lanzamiento</h2>
+        <p>Antes de publicar acordamos responsables, respaldo, monitoreo, manejo de incidentes y mantenimiento. Después del lanzamiento revisamos adopción, errores y resultados para priorizar mejoras con evidencia.</p>
       </article>
       <aside class="card card-body aside-card">
         <span class="eyebrow">Principios</span>
