@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
+    "start": "node ./dist/server/entry.mjs",
     "preview": "node ./dist/server/entry.mjs",
     "check": "astro check",
     "audit:lighthouse": "lighthouse http://localhost:4321/ --output=html --output-path=dist/lighthouse-home.html --only-categories=performance,accessibility,best-practices,seo"
