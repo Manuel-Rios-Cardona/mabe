@@ -35,6 +35,17 @@ function sendFile(response, filePath) {
 
 createServer((request, response) => {
   const url = new URL(request.url ?? '/', `http://${request.headers.host ?? 'localhost'}`)
+
+  if (url.pathname === '/runtime-config.js') {
+    const apiUrl = process.env.VITE_API_URL ?? process.env.API_URL ?? 'http://localhost:3000/api'
+    response.writeHead(200, {
+      'Content-Type': 'text/javascript; charset=utf-8',
+      'Cache-Control': 'no-cache',
+    })
+    response.end(`window.__MABE_CONFIG__ = ${JSON.stringify({ apiUrl })};`)
+    return
+  }
+
   const decodedPath = decodeURIComponent(url.pathname)
   const candidate = normalize(join(rootDir, decodedPath))
   const filePath = candidate.startsWith(rootDir) && existsSync(candidate) && statSync(candidate).isFile()

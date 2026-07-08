@@ -1,6 +1,14 @@
 import { useAuthStore } from './auth-store'
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:3000/api'
+type RuntimeConfigWindow = Window & {
+  __MABE_CONFIG__?: {
+    apiUrl?: string
+  }
+}
+
+const runtimeConfig = typeof window === 'undefined' ? undefined : (window as RuntimeConfigWindow).__MABE_CONFIG__
+const rawApiUrl = runtimeConfig?.apiUrl ?? import.meta.env.VITE_API_URL ?? 'http://localhost:3000/api'
+const API_URL = rawApiUrl.replace(/\/$/, '')
 
 export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
   const token = useAuthStore.getState().accessToken
