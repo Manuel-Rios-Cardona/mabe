@@ -12,6 +12,14 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule)
   const config = app.get(ConfigService)
 
+  app.use((request: express.Request, response: express.Response, next: express.NextFunction) => {
+    if (request.path === '/') {
+      response.json({ ok: true, service: 'mabe-api' })
+      return
+    }
+    next()
+  })
+
   app.enableCors({
     origin: config.get('PUBLIC_APP_URL') ?? true,
     credentials: true,
